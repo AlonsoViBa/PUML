@@ -2,14 +2,12 @@
 
 skinparam packageStyle rectangle
 
-
 actor Profesor
-
 actor Alumno
 
 rectangle Aula_Virtual{
-    node Curso
-    node Grupo
+    (Curso)
+    (Grupo)
 
     Profesor --> (Administrar Asignatura)
     Profesor --> (Administrar Grupo)

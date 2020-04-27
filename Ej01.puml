@@ -1,6 +1,10 @@
 @startuml EJ 1
 skinparam packageStyle rectangle
+    actor Socios
+    actor Fabrica
+    actor Cliente
 
+rectangle Particip{
 
 (Comprar productos) as (Buy)
 (Venta en fabrica) as (VF)
@@ -13,38 +17,28 @@ skinparam packageStyle rectangle
 (Venta a un precio mayor o igual al de la fábrica) as (VentaNormal)
 (Venta en lotes del stock no deseado) as (Lotes)
 
-rectangle Participantes{
+    Fabrica --  Produc
+    Produc <.. VI : extends
+    Produc <.. VF : extends
 
-    actor Socios
+    Produc <.. Recoger : extends
 
-    actor Fabrica
+    Recoger -- Socios
 
-    actor Cliente
-    
+    VSS ..> Socios : extends
+    Socios -- VSS
+    VT ..> Socios : extends
+
+    VentaNormal ..> VT : extends
+    Lotes ..> VT : extends
+
+    Cliente -- Buy
+    VT ..> Buy: extends
+    VT ..> Buy : extends
+    VI ..> Buy : extends
+    VF --* Ben : include
+    VI --* Ben : include
+    Ben -- Socios
 }
-
-Fabrica --  Produc
-Produc <-- VI : extends
-Produc <-- VF : extends
-
-Produc <-- Recoger : extends
-
-Recoger -- Socios
-
-VSS --> Socios : extends
-Socios -- VSS
-VT --> Socios : extends
-
-VentaNormal --> VT : extends
-Lotes --> VT : extends
-
-Cliente -- Buy
-VT --> Buy: extends
-VT --> Buy : extends
-VI --> Buy : extends
-VF --* Ben : include
-VI --* Ben : include
-Ben -- Socios
-
 @enduml
 

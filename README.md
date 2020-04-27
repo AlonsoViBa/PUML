@@ -8,7 +8,7 @@
 
 *La fábrica dispone de tienda física además de una aplicación web para que un cliente pueda consultar el catálogo, los precios y hacer pedidos online. Los beneficios obtenidos por la venta en fábrica y online se reparten entre socios. Los socios tienen obligación de vender en sus propias tiendas a un precio no menor que en fábrica. Ahora bien, en sus propias tiendas pueden hacer lotes de productos para poder liberarse de stock no deseado.*
 
-![ImagenEjercicio_01](EJ1.png)
+![ImagenEjercicio_01]()
 
 
 ##***Ejercicio 2. Caso de uso moodle aula virtual***
@@ -21,4 +21,4 @@
 
 
 
-![ImagenEjercicio_02](EJ2.png)
+![ImagenEjercicio_02]()
